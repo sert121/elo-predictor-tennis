@@ -1,3 +1,4 @@
+from operator import index
 import streamlit as st  
 import pandas as pd
 
@@ -27,7 +28,7 @@ player_1 = st.selectbox(
 
 player_2 = st.selectbox(
      'Player 2',
-     PLAYERS)
+     PLAYERS,index=PLAYERS[4])
 # st.write('You selected:', player_1,' vs ', player_2)
 probability_elo = compute_elo(PLAYER_ELO[player_1], PLAYER_ELO[player_2])
 # st.text(PLAYER_ELO[player_1])
